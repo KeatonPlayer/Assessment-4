@@ -51,7 +51,7 @@ function createMemeCard(memes){
 const memeCard = document.createElement('div')
 memeCard.classList.add('meme-card')
 
-memeCard.innerHTML = `<img alt='meme cover src=${memes.imageURL} class="meme-cover"/>
+memeCard.innerHTML = `<img alt='meme cover' src=${memes.imageURL} class="meme-cover"/>
 <p class="meme-title">${memes.title}</p>
 <div class="btns-container">
 <button onclick="updateMemes(${memes.id}, 'minus')">-</button>

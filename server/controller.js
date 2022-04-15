@@ -40,10 +40,10 @@ updateMemes: (req, res) => {
     let { type } = req.body
     let index = memes.findIndex(elem => +elem.id === +id)
 
-    if (memes[index].rating === 5 && type === 'plus') {
-        res.status(400).send('cannot go above 5')
+    if (memes[index].rating == 5 && type === 'plus') {
+        res.status(400).send('you cannot go above 5')
     } else if (memes[index].rating === 0 && type === 'minus') {
-        res.status(400).send('cannot go below 0')
+        res.status(400).send('you cannot go below 0')
     } else if (type === 'plus') {
         memes[index].rating++
         res.status(200).send(memes)
